@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Md Firoz Ahmad – Full-Stack & Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+/* Compact Bootstrap-style utilities (Bootstrap's hosted CSS cannot load on published pages, so the parts used are inlined) */
+:root{--bg:#EDF1F7;--surface:#fff;--ink:#14213D;--muted:#4B5873;--line:#CBD5E4;--accent:#2447D6;--accent2:#7A3FE0;--on:#fff;--amber:#B86B00;
+--font:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1626;--surface:#18223A;--ink:#E8EEFB;--muted:#9AA9C6;--line:#2A3858;--accent:#7C9BFF;--accent2:#B393FF;--on:#0F1626;--amber:#F2B25C}}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#18223A;--ink:#E8EEFB;--muted:#9AA9C6;--line:#2A3858;--accent:#7C9BFF;--accent2:#B393FF;--on:#0F1626;--amber:#F2B25C}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.row{display:flex;flex-wrap:wrap;margin:0 -12px}.row>*{width:100%;padding:0 12px;margin-bottom:24px}
+@media(min-width:768px){.col-md-6{width:50%}.col-md-7{width:58.333%}.col-md-5{width:41.667%}.col-md-3{width:25%}}
+@media(min-width:992px){.col-lg-4{width:33.333%}}
+.collapse:not(.show){display:none}.collapsing{height:0;overflow:hidden;transition:height .3s}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.navbar .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:56px}
+.navbar-brand{font-weight:800;color:var(--ink);text-decoration:none}
+.navbar-toggler{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 12px;font:600 14px var(--font)}
+.navbar-collapse{flex-basis:100%}.nav{display:flex;flex-direction:column;gap:4px;margin:0;padding:8px 0;list-style:none;align-items:flex-start}
+.nav-link{display:block;padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+.nav-link:hover{color:var(--ink)}.nav-link.active{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+@media(max-width:767px){.navbar-toggler{display:block}}
+@media(min-width:768px){.navbar-collapse{display:flex!important;flex-basis:auto;height:auto!important}.nav{flex-direction:row;padding:0;align-items:center}}
+.btn{display:inline-block;padding:11px 22px;border-radius:10px;font:600 16px var(--font);text-decoration:none;border:2px solid var(--accent);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px -8px var(--accent)}
+.btn-primary{background:linear-gradient(120deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}
+.btn-outline{background:transparent;color:var(--accent)}
+.badge{display:inline-block;font-size:13px;font-weight:700;border-radius:6px;padding:2px 10px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;height:100%;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -22px rgba(20,33,61,.55)}
+/* page */
+.hero{padding:120px 0 40px;background:radial-gradient(900px 420px at 85% 0,color-mix(in srgb,var(--accent2) 22%,transparent),transparent 70%),radial-gradient(700px 380px at 0 20%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 70%)}
+.hero .row{align-items:center}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.04;letter-spacing:-.03em;font-weight:800;margin:6px 0 14px}
+.role{font-size:clamp(20px,3vw,26px);font-weight:600;color:var(--accent);min-height:1.5em;margin:0 0 14px}
+.caret{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);font-size:18px;max-width:52ch;margin:0 0 24px}
+.photo-wrap{position:relative;width:min(320px,80%);aspect-ratio:1;margin:0 auto}
+.photo{width:100%;height:100%;border-radius:50%;padding:6px;background:conic-gradient(from 160deg,var(--accent),var(--accent2),var(--accent))}
+.photo>div,.photo img{width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;object-fit:cover;background:var(--surface);color:var(--accent);font-size:84px;font-weight:800;letter-spacing:-.04em}
+.float{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:4px 12px;font-weight:700;font-size:14px;box-shadow:0 10px 24px -14px rgba(20,33,61,.6);animation:bob 5s ease-in-out infinite}
+.f1{top:6%;left:-6%}.f2{top:42%;right:-10%;animation-delay:-1.5s}.f3{bottom:6%;left:2%;animation-delay:-3s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.stats{margin-top:28px}.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;text-align:center}
+.stat b{display:block;font-size:34px;line-height:1.1;color:var(--accent)}.stat span{color:var(--muted);font-size:14px}
+section{padding:64px 0}h2{font-size:clamp(28px,3.6vw,38px);letter-spacing:-.02em;line-height:1.1;margin:0 0 8px;font-weight:800}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 18px;font:600 15px var(--font);cursor:pointer}
+.filters button.on{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.card h3{font-size:23px;margin:8px 0 4px;letter-spacing:-.01em}.stack{color:var(--muted);font-size:14px;margin:0 0 12px}
+.card ul{padding-left:20px;margin:0 0 16px}.card li{margin-bottom:5px}.links{display:flex;gap:16px;font-weight:600}
+.hide{display:none}
+.skill h3{font-size:16px;color:var(--amber);margin:0 0 12px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px 11px;font-size:14px;font-weight:600;transition:background .15s,color .15s}
+.chips li:hover{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.item{margin-bottom:16px}.item strong{display:block;font-size:18px}.item span{color:var(--muted)}
+form label{display:block;font-weight:600;font-size:14px;margin:0 0 4px}
+form input,form textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:16px var(--font);margin-bottom:14px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
+#top-btn{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:var(--on);font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+#top-btn.show{opacity:1;pointer-events:auto}
+footer{padding:24px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navmenu" data-bs-offset="80" tabindex="0">
+<nav class="navbar"><div class="container">
+  <a class="navbar-brand" href="#home">Md Firoz Ahmad</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+  <div class="collapse navbar-collapse" id="navmenu"><ul class="nav">
+    <li><a class="nav-link" href="#projects">Projects</a></li><li><a class="nav-link" href="#skills">Skills</a></li>
+    <li><a class="nav-link" href="#education">Education</a></li><li><a class="nav-link" href="#contact">Contact</a></li>
+    <li><button class="btn btn-outline" id="theme" type="button" style="padding:3px 14px;font-size:14px" aria-label="Toggle light or dark theme">Theme</button></li>
+  </ul></div>
+</div></nav>
+
+<main>
+<header class="hero" id="home"><div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <span class="badge">Open to work</span>
+      <h1>Hi, I'm Firoz.</h1>
+      <p class="role"><span id="typed"></span><span class="caret"></span></p>
+      <p class="lead">I'm an MCA student who builds responsive Angular and React interfaces backed by ASP.NET Web API and PostgreSQL. I'm looking for a full-stack or frontend developer role.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-primary" href="#projects">See my projects</a><a class="btn btn-outline" href="#contact">Contact me</a></div>
+    </div>
+    <div class="col-md-5">
+      <div class="photo-wrap">
+        <div class="photo" id="photo"><div aria-label="Photo placeholder with initials FA">FA</div></div>
+        <span class="float f1">Angular</span><span class="float f2">.NET</span><span class="float f3">PostgreSQL</span>
+      </div>
+    </div>
+  </div>
+  <div class="row stats">
+    <div class="col-md-3"><div class="stat"><b data-n="4">0</b><span>projects deployed</span></div></div>
+    <div class="col-md-3"><div class="stat"><b data-n="15" data-s="+">0</b><span>features in Mini Blog</span></div></div>
+    <div class="col-md-3"><div class="stat"><b data-n="10" data-s="+">0</b><span>REST endpoints built</span></div></div>
+    <div class="col-md-3"><div class="stat"><b data-n="3">0</b><span>databases used</span></div></div>
+  </div>
+</div></header>
+
+<section id="projects"><div class="container">
+  <h2 class="reveal">Projects</h2><p class="sub reveal">Two full-stack apps, one API-driven tool and one design-focused site.</p>
+  <div class="filters reveal" role="group" aria-label="Filter projects">
+    <button class="on" data-f="all">All</button><button data-f="full">Full-stack</button><button data-f="front">Frontend</button>
+  </div>
+  <div class="row">
+    <div class="col-md-6 p reveal" data-t="full"><article class="card">
+      <span class="badge">Full-stack</span><h3>Mini Blog</h3><p class="stack">Angular, ASP.NET Web API, PostgreSQL</p>
+      <ul><li>Full-stack blog application with 15+ features.</li><li>10+ RESTful API endpoints in .NET for blog management, authentication and search.</li><li>Complex Angular frontend logic that improves performance and user experience.</li><li>Responsive interface across screen sizes.</li></ul>
+      <div class="links"><a href="https://mini-blog608.netlify.app/" data-link="mini-blog-demo">Live demo</a><a href="https://github.com/firoz608">GitHub</a></div></article></div>
+    <div class="col-md-6 p reveal" data-t="full"><article class="card">
+      <span class="badge">Full-stack</span><h3>CRUD Web Application</h3><p class="stack">Angular, ASP.NET Web API, PostgreSQL, Netlify, Render</p>
+      <ul><li>Create, Read, Update and Delete through REST APIs and standard HTTP methods.</li><li>Angular routing, reactive forms, validation and reusable components.</li><li>Angular services with Observables for async API calls.</li><li>Frontend on Netlify, backend API on Render.</li></ul>
+      <div class="links"><a href="https://mycrudapp608.netlify.app/" data-link="crud-demo">Live demo</a><a href="https://github.com/firoz608">GitHub</a></div></article></div>
+    <div class="col-md-6 p reveal" data-t="front"><article class="card">
+      <span class="badge">Frontend</span><h3>Currency Converter</h3><p class="stack">HTML5, CSS3, JavaScript</p>
+      <ul><li>Responsive converter with live exchange rates from an API.</li><li>Country flags update automatically with the selected currency.</li><li>Fetch API with async/await for API communication.</li></ul>
+      <div class="links"><a href="https://currencyconverter608.netlify.app/" data-link="currency-demo">Live demo</a></div></article></div>
+    <div class="col-md-6 p reveal" data-t="front"><article class="card">
+      <span class="badge">Frontend</span><h3>BTI-Foundation</h3><p class="stack">HTML5, Tailwind CSS</p>
+      <ul><li>Responsive website with custom UI components, animated logos and background patterns.</li><li>Layouts tuned for usability on every screen size.</li><li>Sections on HVAC Design, AutoCAD and programming technologies.</li></ul>
+      <div class="links"><a href="https://bti-foundation.netlify.app/" data-link="bti-demo">Live demo</a></div></article></div>
+  </div>
+</div></section>
+
+<section id="skills" style="background:color-mix(in srgb,var(--surface) 55%,transparent)"><div class="container">
+  <h2 class="reveal">Skills</h2><p class="sub reveal">The tools I use to take a feature from idea to deployment.</p>
+  <div class="row">
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Frontend</h3><ul class="chips"><li>React.js</li><li>Angular</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>Tailwind CSS</li></ul></div></div>
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Backend</h3><ul class="chips"><li>RESTful APIs</li><li>.NET</li><li>ASP.NET Web API</li></ul></div></div>
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Languages</h3><ul class="chips"><li>C</li><li>C++</li><li>C#</li><li>Python</li><li>Java</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li></ul></div></div>
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Databases</h3><ul class="chips"><li>PostgreSQL</li><li>SQL Server</li><li>MySQL</li></ul></div></div>
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Core concepts</h3><ul class="chips"><li>Data Structures</li><li>OOP</li><li>CRUD</li><li>HTTP Methods</li><li>API Integration</li><li>Authentication</li><li>Responsive Design</li></ul></div></div>
+    <div class="col-lg-4 reveal"><div class="card skill"><h3>Tools</h3><ul class="chips"><li>VS Code</li><li>Visual Studio</li><li>Git</li><li>GitHub</li><li>Supabase</li><li>Render</li><li>Netlify</li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="container"><div class="row">
+  <div class="col-md-6 reveal"><h2>Education</h2>
+    <div class="item"><strong>Master of Computer Application (M.C.A)</strong><span>MAKAUT University of West Bengal</span></div>
+    <div class="item"><strong>Bachelor of Computer Application (B.C.A)</strong><span>Maulana Mazrul Haque Arabic and Persian Academy</span></div></div>
+  <div class="col-md-6 reveal"><h2>Certifications</h2>
+    <div class="item"><strong>Introduction to Internet of Things</strong><span>NPTEL, IIT Kharagpur</span></div>
+    <div class="item"><strong>Diploma in Computer Applications (DCA)</strong><span>Certificate completed</span></div>
+    <div class="item"><span>I also practice data structures and algorithms and join workshops to build teamwork skills.</span></div></div>
+</div></div></section>
+
+<section id="contact" style="background:color-mix(in srgb,var(--surface) 55%,transparent)"><div class="container"><div class="row">
+  <div class="col-md-6 reveal"><h2>Let's work together</h2>
+    <p class="sub">I'm open to full-stack and frontend developer roles. Send a message or reach me directly.</p>
+    <p><a href="mailto:mdfirozahmad.patna@gmail.com">mdfirozahmad.patna@gmail.com</a><br><a href="tel:+919304363297">+91 93043 63297</a></p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-outline" href="https://github.com/firoz608">GitHub</a><a class="btn btn-outline" href="https://linkedin.com/in/Md%20Firoz%20Ahmad">LinkedIn</a></div></div>
+  <div class="col-md-6 reveal"><form id="cf" class="card">
+    <label for="n">Your name</label><input id="n" required autocomplete="name">
+    <label for="m">Message</label><textarea id="m" rows="4" required></textarea>
+    <button class="btn btn-primary" type="submit">Send by email</button></form></div>
+</div></div></section>
+</main>
+
+<footer><div class="container">© <span id="yr"></span> Md Firoz Ahmad</div></footer>
+<button id="top-btn" aria-label="Back to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  // Add your photo: paste an image data URI or let Claude embed it for you
+  var PHOTO="Snapchat-1685425404.jpg";
+  if(PHOTO){document.getElementById('photo').innerHTML='<img src="'+PHOTO+'" alt="Md Firoz Ahmad">';}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // typed roles
+  var roles=['Full-Stack Developer','Frontend Developer','Angular + .NET Developer'],t=document.getElementById('typed'),ri=0,ci=0,del=false;
+  function tick(){var w=roles[ri];if(rm){t.textContent=roles[0];return}
+    t.textContent=w.slice(0,ci);
+    if(!del&&ci===w.length){del=true;return setTimeout(tick,1500)}
+    if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+    ci+=del?-1:1;setTimeout(tick,del?40:80)}
+  tick();
+  // reveal + counters
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('[data-n]').forEach(function(el){
+    var n=+el.dataset.n,s=el.dataset.s||'',st=null;
+    function step(ts){st=st||ts;var p=Math.min((ts-st)/1000,1);el.textContent=Math.round(n*p)+(p===1?s:'');if(p<1)requestAnimationFrame(step)}
+    if(rm){el.textContent=n+s}else{requestAnimationFrame(step)}});
+  // project filter
+  var fb=document.querySelectorAll('.filters button');
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    fb.forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.p').forEach(function(c){c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f)})})});
+  // theme
+  var root=document.documentElement;
+  document.getElementById('theme').addEventListener('click',function(){
+    var d=root.getAttribute('data-theme')==='dark'||(root.getAttribute('data-theme')!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme',d?'light':'dark')});
+  // contact form -> mailto
+  document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();
+    var n=document.getElementById('n').value,m=document.getElementById('m').value;
+    location.href='mailto:mdfirozahmad.patna@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m)});
+  // back to top
+  var tb=document.getElementById('top-btn');
+  addEventListener('scroll',function(){tb.classList.toggle('show',scrollY>600)},{passive:true});
+  tb.addEventListener('click',function(){scrollTo({top:0,behavior:rm?'auto':'smooth'})});
+})();
+</script>
+</body>
+</html>
